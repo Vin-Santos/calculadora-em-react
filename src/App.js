@@ -109,10 +109,10 @@ const App = () => {
       <Content>
         <Input value={currentNumber}/>
         <Row>
-          <Button label="x" onClick={handleMultiplicationNumbers}/>
-          <Button label="/" onClick={handleDivideNumbers}/>
-          <Button label="c" onClick={handleOnClear}/>
           <Button label="." onClick={() => handleFloatingPoint('.')}/>
+          <Button label="c" onClick={handleOnClear}/>
+          <Button label="/" onClick={handleDivideNumbers}/>
+          <Button label="x" onClick={handleMultiplicationNumbers}/>
         </Row>
         <Row>
           <Button label="7" onClick={() => handleAddNumber('7')}/>
