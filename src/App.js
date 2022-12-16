@@ -76,6 +76,11 @@ const App = () => {
     }
 
   }
+
+  const handleFloatingPoint = (point) => {
+    setCurrentNumber(prev => `${prev === '0' ? '' : prev}${point}`)
+  }
+
   const handleEquals = () => {
 
     if(firstNumber !== '0' && operation !== '' && currentNumber !== '0'){
@@ -107,7 +112,7 @@ const App = () => {
           <Button label="x" onClick={handleMultiplicationNumbers}/>
           <Button label="/" onClick={handleDivideNumbers}/>
           <Button label="c" onClick={handleOnClear}/>
-          <Button label="."/>
+          <Button label="." onClick={() => handleFloatingPoint('.')}/>
         </Row>
         <Row>
           <Button label="7" onClick={() => handleAddNumber('7')}/>
